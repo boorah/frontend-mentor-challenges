@@ -1,0 +1,17 @@
+// font imports
+import "@fontsource/space-mono/400.css";
+import "@fontsource/space-mono/700.css";
+
+import React from "react";
+import ReactDOM from "react-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+
+import { customTheme } from "./theme";
+import App from "./App";
+
+ReactDOM.render(
+  <ChakraProvider theme={customTheme}>
+    <App />
+  </ChakraProvider>,
+  document.getElementById("root")
+);
