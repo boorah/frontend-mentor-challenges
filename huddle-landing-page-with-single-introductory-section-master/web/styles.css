@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(./assets/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.container__logo {
+  align-self: flex-start;
+  width: 120px;
+}
+
+.container__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container__illustration {
+  margin: 3.5em 0 2em 0;
+  max-width: 100%;
+}
+
+.container__text-content {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 3em 0;
+  gap: 1em;
+}
+
+.text-content__heading {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.text-content__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.text-content__button {
+  transition: all 0.2s ease-out;
+  color: hsl(257, 40%, 49%);
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 1.5em;
+  background: none;
+  background-color: white;
+  padding: 0.7em 6em 0.7em 6em;
+}
+
+.text-content__button:hover {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
+
+.container__icons {
+  margin: 4em 0 2em 0;
+  display: flex;
+  color: white;
+  justify-content: center;
+  gap: 1em;
+}
+
+.icon {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.icon:hover {
+  transition: all 0.2s ease-in;
+  color: hsl(300, 69%, 71%);
+}
+
+@media (min-width: 580px) {
+  .container__illustration {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container__text-content {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image: url(./assets/bg-desktop.svg);
+    background-size: cover;
+  }
+
+  .container__section {
+    flex-direction: row;
+    align-items: center;
+    gap: 4em;
+  }
+
+  .container__text-content {
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  .text-content__heading {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .text-content__paragraph {
+    font-size: 1.25rem;
+    text-align: left;
+  }
+
+  .text-content__button {
+    font-size: 1rem;
+    border-radius: 1.75em;
+    padding: 1em 4em 1em 4em;
+  }
+
+  .container__icons {
+    font-size: 1.5rem;
+    align-self: flex-end;
+  }
+}
